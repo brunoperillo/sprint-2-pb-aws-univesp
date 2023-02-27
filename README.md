@@ -44,6 +44,7 @@ O seguinte esquema sintetiza a arquitetura proposta nesta avaliação:
   - Otimização do código fonte (evitar duplicações de código)
 - Objetividade do README.md
 - Modelo de organização da equipe para o desenvolvimento do projeto
+- Página criada com acesso online.
 
 ***
 
