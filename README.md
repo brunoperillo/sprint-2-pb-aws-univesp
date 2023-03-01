@@ -4,6 +4,14 @@ Avaliação da segunda sprint do programa de bolsas Compass UOL para formação 
 
 ***
 
+## Equipe
+- Bruno Monserrat Perillo
+- Barbara Haydee Presente
+- Luiz Renato Sassi
+- Oseas Mattoso Monteiro
+
+***
+
 ## Execução (Código Fonte)
 
 Exposição na web do projeto da Sprint 1, com a utilização da AWS Cloud.
