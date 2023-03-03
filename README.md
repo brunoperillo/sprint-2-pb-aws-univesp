@@ -65,7 +65,7 @@ Aprendemos a navegar pelo console, interagimos com a plataforma e exploramos os 
 
 - Criação VPC e configuração no console AWS *[PDF]
 
-- *[URL] (http://52.5.247.37:9000) 
+- *[URL](http://52.5.247.37:9000). 
 
 ### Requisitos
 
@@ -79,10 +79,10 @@ Exposição na web do projeto da Sprint 1, com a utilização da AWS Cloud.
 
 ## Dificudades conhecidas 
 
-- A naturalização para usuário do sistema Windows *[pré-requisitos](https://docs.aws.amazon.com/pt_br/AWSEC2/latest/WindowsGuide/connecting_to_windows_instance.html#rdp-prereqs), para conectar-se à sua instância do Windows.
+- A naturalização para usuário do sistema Windows [pré-requisitos](https://docs.aws.amazon.com/pt_br/AWSEC2/latest/WindowsGuide/connecting_to_windows_instance.html#rdp-prereqs), para conectar-se à sua instância do Windows.
 
 - Familialização com a plataforma AWS para monitorar a performance, criação e configuração das portas e endpoints. 
-  Principalmente se liberou a porta certa de acesso, para maiores *[informações](https://docs.aws.amazon.com/pt_br/AWSEC2/latest/WindowsGuide/ConfigurePortsAndEndpoints.html).
+  Principalmente se liberou a porta certa de acesso, para maiores [informações](https://docs.aws.amazon.com/pt_br/AWSEC2/latest/WindowsGuide/ConfigurePortsAndEndpoints.html).
 
 
 
