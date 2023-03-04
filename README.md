@@ -4,61 +4,39 @@ Avaliação da segunda sprint do programa de bolsas Compass UOL para formação 
 
 ***
 
+## Objetivo
+
+Este guia irá orientá-lo na criação de uma Virtual Private Cloud (VPC) na plataforma de nuvem da Amazon (AWS) para a exposição de sites e projetos na web.
+
+## Pré-requisitos
+
+Antes de começar, é necessário ter uma conta da AWS e acesso ao console da AWS. 
+É importante também estar familiarizado com os conceitos básicos de redes e segurança.
+
 ## Execução (Código Fonte)
 
-Exposição na web do projeto da Sprint 1, com a utilização da AWS Cloud.
+#### Passo 1 - Criando uma VPC
 
-**Especificações**:
+1. Abra o Console da AWS e navegue até o serviço de VPC.
+2. Clique em "Criar VPC e defina o nome da sua VPC, juntamente com o bloco de endereço de IP e configurações do DNS.
+3. Após isso, clique em "Criar" e aguarde a confirmação.
 
-Passos de execução do projeto em uma conta AWS disponibilizada no Programa de Bolsas:
+#### Passo 2 - Criando um Internet Gateway e associando à VPC
 
-1. Criar uma VPC.
-2. Criar um Internet Gateway, associando-o à VPC criada.
-3. Criar as rotas públicas e privadas.
-4. Criar um NAT Gateway para ligação da rota pública com um IP elástico.
-5. Concluir a configuração da rota privada.
-6. Criar ou editar o Security Group com as regras entrada e saída.
-7. Criar uma instância t2.micro.
-8. Instalar um servidor nginx na instância.
-9. Trocar ou acrescentar a porta 9000 para acesso através do nginx.
-10. Subir ao servidor a aplicação da Sprint 1.
-11. Na página html disponibilizada com o código da Sprint 1, colocar a identificação do grupo e os nomes dos componenentes.
-12. Permitir o acesso da porta 9000 à pasta com a aplicação, para visualização da página de forma online.
+1. No console da VPC, selecione "Internet Gateways" no painel de navegação à esquerda.
+2. Clique em "Criar Internet Gateway" e defina um nome para o seu gateway.
+3. Selecione o gateway recém-criado e clique em "Associar com VPC".
+4. Selecione a VPC que você criou anteriormente e confirme a associação.
 
-O seguinte esquema sintetiza a arquitetura proposta nesta avaliação:
+#### Passo 3 - Criando rotas públicas e privadas
 
-<img src='assets/aws_web_server.jpg' width='50%'>
+1. No console da VPC, selecione "Rotas" no painel de navegação à esquerda.
+2. Clique em "Criar rota" e defina a tabela de rota que deseja atualizar.
+3. Adicione uma nova rota para a rede pública, com o bloco de endereço IP 0.0.0.0/0 e selecione o Internet Gateway que você criou anteriormente como destino.
+4. Adicione uma nova rota para a rede privada, com o bloco de endereço IP da sua sub-rede privada e selecione o NAT Gateway que você criará no próximo passo como destino.
 
+#### Passo 4 - Criando um NAT Gateway
 
-***
-
-## O que será avaliado?
-
-- Uso do código JavaScript da Sprint 1
-- Seguir as atividades na ordem proposta
-- Subir códigos no git ao longo do desenvolvimento
-- Organização geral do código fonte
-  - Estrutura de pastas
-  - Estrutura da logica de negócio
-  - Divisão de responsabilidades em arquivos/pastas distintos
-  - Otimização do código fonte (evitar duplicações de código)
-- Objetividade do README.md
-- Modelo de organização da equipe para o desenvolvimento do projeto
-- Página criada com acesso online.
-
-***
-
-## Entrega
-
-- Aceitar o convite do repositório da sprint-2-pb-aws-univesp;
-- **O trabalho deve ser feito em grupos de quatro pessoas**;
-  - Evitar repetições de grupos da sprint anterior;
-- Criar uma branch no repositório com o formato grupo-número (Exemplo: grupo-1);
-- Subir o trabalho na branch com um [Readme.md](README.md)
-  - documentar detalhes sobre como a avaliação foi desenvolvida
-  - dificuldades conhecidas
-  - como utilizar o sistema
-  - 🔨 código fonte desenvolvido (Sugestão: pasta `src`)
-  - configuração nginx
-  - URL para acesso à página
-- O prazo de entrega é até às 12h do dia 06/03/2023 no repositório do github ([https://github.com/Compass-pb-aws-2023-Univesp/sprint-2-pb-aws-univesp](https://github.com/Compass-pb-aws-2023-Univesp/sprint-2-pb-aws-univesp)).
+1. No console da VPC, selecione "NAT Gateways" no painel de navegação à esquerda.
+2. Clique em "Criar NAT Gateway" e defina a VPC e a sub-rede pública onde o NAT Gateway será criado.
+3. Selecione um Elastic IP que será associado ao NAT Gateway e aguarde a confirmação da criação.
