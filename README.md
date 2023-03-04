@@ -41,7 +41,7 @@ Aprendemos a navegar pelo console, interagimos com a plataforma e exploramos os 
       Nessa parte é necessário tem um cartão de crédito para criar uma conta na AWS, não paga no primeiro momento só se utilizar uma determinada quantidade. 
       É possivel pesquisar mais sobre o o nível gratuito da  AWS *[nesse link](https://aws.amazon.com/pt/free/free-tier-faqs/). 
       
-      Observação: No projeto de bolsa da Compass UOL foi disponibilizado as contas, então não feito o primeiro passo para a criação de conta. 
+      Observação: No projeto de bolsa da Compass UOL foi disponibilizado as contas, então não foi feito o primeiro passo para a criação de conta. 
 
 ## Passos de execução do projeto 
 
@@ -61,7 +61,7 @@ Aprendemos a navegar pelo console, interagimos com a plataforma e exploramos os 
 
 - Configuramos um servidor nginx na instância;
 
-- Torcamos ou acrescentamos a porta 9000 para acessar atráves do nginx. 
+- Trocamos ou acrescentamos a porta 9000 para acessar atráves do nginx. 
 
 - Criação VPC e configuração no console AWS *[PDF]
 
