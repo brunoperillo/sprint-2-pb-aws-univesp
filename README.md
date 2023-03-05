@@ -72,7 +72,7 @@ Realize os comandos no terminal:
 - sudo su –
 - yum update -y
 - sudo amazon-linux-extras install nginx1
-- systemctl enable nginx –--now
+- systemctl enable nginx –-now
 Após os comandos acima, a máquina estará pronta para upar sua aplicação na pasta destinada para root do nginx.
 
 #### Passo 9 - Trocar ou acrescentar a porta 9000 para acesso através do nginx.
@@ -189,4 +189,3 @@ Após a realização destas 10 etapas, a arquiterura do nosso ambiente deverá e
 O cliente não tem acesso direto à máquina onde estará armazenado o conteúdo da nossa aplicação, todo o tráfego deverá passar pela nossa instância de Bastion Host, o qual tem permissão dentro da VPC para acesso a subnet privada.
 
 ![Arquiterura final](/assets/img/diagram.png)
-
