@@ -6,6 +6,10 @@ body{
     font-size: 10px;
     text-align: initial;
 }
+h2{
+    font-size: 15px;
+    text-align: center;
+}
 legend{
     font-size: 18px;
 }
