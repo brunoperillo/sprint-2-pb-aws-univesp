@@ -1,0 +1,69 @@
+body{
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #0a02527c, #0920eeb4);
+}
+
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartao {
+  background: linear-gradient(to right, #8decf5, #06afbe);
+  width: 35vw; 
+  margin: 0 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 7px 7px 13px 0px  hsl(225, 18%, 54%);
+}
+
+.cartao-conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo {
+  padding-bottom: 0px;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  font-weight: 900;
+  
+}
+
+.descricao {
+  margin-top: 1rem;
+  line-height: 1.7rem;
+  text-align: center;
+  font-size: 17px;
+}
+
+.mensagem {
+  color: red;
+  margin-top: 1.7rem;
+  line-height: 1.7rem;
+  text-align: center;
+  font-size: 17px;
+}
+
+.botao {
+background:  #0066A2;
+color: #fff;
+margin-left: 5rem;
+padding: 5px 20px 5px 20px;
+border: 1px solid #fcfafa;
+border-radius: 20px;
+text-shadow: none;
+}
+
+.botao:hover {
+background: #16d8e6;
+color: #070000;
+border: 1px solid #080000;
+border-radius: 20px;
+text-shadow: none;
+}
