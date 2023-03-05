@@ -64,15 +64,15 @@ O seguinte esquema sintetiza a arquitetura proposta nesta avaliação:
 - O prazo de entrega é até às 12h do dia 06/03/2023 no repositório do github ([https://github.com/Compass-pb-aws-2023-Univesp/sprint-2-pb-aws-univesp](https://github.com/Compass-pb-aws-2023-Univesp/sprint-2-pb-aws-univesp)).
 
 
-#**<font color="blue">Eplicando a nossa Solução para a atividade acima</font>**
+#**<font color="blue">Eplicando a nossa Solução para a atividade acima</font>
 O Grupo reunui-se pelo Teams, para dividir suas tarefas. 
-<<<<<<< HEAD
+
 As tarefas foram organizadas no Trello.
     - Se imagens:
 =======
 As tarefas foi organizadas no Trello.
     - Segue imagens:
->>>>>>> e991ea0410603b44ef6f4d422369fc56ddf1f37a
+
 
 
 
