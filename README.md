@@ -165,7 +165,7 @@ E por fim verificando se a aplicação está online, esperamos ver no terminal a
 ### Passo 11 - Na página html disponibilizada com o código da Sprint 1, colocar a identificação do grupo e os nomes dos componenentes.
 Na estrutura do HTML desenvolvido durante a sprint 1, foi adicionado o nome dos integrantes do grupo da sprint 2, como segue na imagem abaixo:
 
-![Página de Validação](/assets/img/aplicacao.PNG.PNG)
+![Página de Validação](/assets/img/aplicacao.png)
 
 ### Passo 12 - Permitir o acesso da porta 9000 à pasta com a aplicação, para visualização da página de forma online.
 Na criação do grupo de segurança do Load Balancer, devemos adicionar uma regra TCP Personalizada para permitir acesso de qualquer lugar pela porta 9000, caso contrário, o acesso ocorrerá apenas pelas portas padrões 80: HTTP e 443: HTTPS. Isso fará com que um usuário possa acessar nossa aplicação adicionando um `:9000` ao final da URL.
@@ -176,7 +176,7 @@ Adicionar um grupo de segurança existente ou clicar em "criar novo grupo de seg
 
 Adicionar Uma rega TCP Personalizado com a porta de acesso 9000.
 Clicar em salvar.
-![Add Rule to New Group](assets/img/security-group.PNG)
+![Add Rule to New Group](assets/img/security-group.png)
 
 
 Finzalizada essas duas etapas, nossa aplicação deverá estar acessível através do DNS do Load Balancer
@@ -186,4 +186,4 @@ Finzalizada essas duas etapas, nossa aplicação deverá estar acessível atrav�
 ## Conclusão
 Após a realização destas 10 etapas, a arquiterura do nosso ambiente deverá estar como na imagem abaixo.
 O cliente não tem acesso direto à máquina onde estará armazenado o conteúdo da nossa aplicação, todo o tráfego deverá passar pela nossa instância de Bastion Host, o qual tem permissão dentro da VPC para acesso a subnet privada.
-![Arquiterura final](assets/img/diagram.PNG)
+![Arquiterura final](assets/img/diagram.png)
