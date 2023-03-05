@@ -27,9 +27,9 @@ A primeira interação entre a equipe foi  através de reuniões diárias antes 
 
 Com isso separamos as atividades em três parte, dessa forma:
 
-1 - Readme - Kelly P L Silva
+1 - Readme e validação MVP (produto mínimo viável)
 
-2 - Criação VPC e configuração no console AWS - Diego Lopes 
+2 - Criação VPC e configuração no console AWS
 
 3 - Instalação nginx e configuraçao na instância - Carlos Roberto Camilo
 
