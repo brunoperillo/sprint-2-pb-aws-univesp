@@ -165,108 +165,6 @@ E por fim verificando se a aplicação está online, esperamos ver no terminal a
 ### Passo 11 - Na página html disponibilizada com o código da Sprint 1, colocar a identificação do grupo e os nomes dos componenentes.
 Na estrutura do HTML desenvolvido durante a sprint 1, foi adicionado o nome dos integrantes do grupo da sprint 2, como segue na imagem abaixo:
 
-![Página de Validação](assets/img/aplicacao.png)
-
-### Passo 12 - Permitir o acesso da porta 9000 à pasta com a aplicação, para visualização da página de forma online.
-Na criação do grupo de segurança do Load Balancer, devemos adicionar uma regra TCP Personalizada para permitir acesso de qualquer lugar pela porta 9000, caso contrário, o acesso ocorrerá apenas pelas portas padrões 80: HTTP e 443: HTTPS. Isso fará com que um usuário possa acessar nossa aplicação adicionando um `:9000` ao final da URL.
-Esta técnica serve para casos específicos onde algumas aplicações só podem ser acessadas através de portas específicas, como no caso de API's.
-
-Adicionar um grupo de segurança existente ou clicar em "criar novo grupo de segurança".
-![Security Group Rule](/assets/img/add-security-group.png)
-
-Adicionar Uma rega TCP Personalizado com a porta de acesso 9000.
-Clicar em salvar.
-![Add Rule to New Group](/assets/img/security-group.PNG)
-
-
-Finzalizada essas duas etapas, nossa aplicação deverá estar acessível através do DNS do Load Balancer
-
-***
-
-## Conclusão
-Após a realização destas 10 etapas, a arquiterura do nosso ambiente deverá estar como na imagem abaixo.
-O cliente não tem acesso direto à máquina onde estará armazenado o conteúdo da nossa aplicação, todo o tráfego deverá passar pela nossa instância de Bastion Host, o qual tem permissão dentro da VPC para acesso a subnet privada.
-![Arquiterura final](/assets/img/diagram.png)
-
-
-### Passo 10 - Subir ao servidor a aplicação da Sprint 1.
-Nossa aplicação ficará armazenada num servidor privado, o qual só poderá ser acessado através da nossa instância Bastion Host. Portanto, para subir nossa aplicação, deveremos primeiro zipar o conteúdo e relizar uma cópia da nossa máquina local para a instância _bastion_.
-Os seguintes comandos foram realizados utilizando o terminal do windows, aberto no mesmo diretório que a chave SSH:
-
-Acessando o bastion host:
-```sh
-	ssh -i minhaChave.pem ec2-user@54.165.101.229
-```
-
-Fazendo cópia da chave SSH para o bastion host:
-```sh
-	scp -i minhaChave.pem minhaChave.pem ec2-user@54.165.101.229:/tmp/
-```
-
-Copiar conteúdo zipado para o bastion host:
-```sh
-	scp -i minhaChave.pem sprint_1.zip ec2-user@54.165.101.229:/tmp/
-```
-
-***
-
-Neste ponto, temos nossa chave privada no bastion host assim como o conteúdo da aplicação lozalizados no diretório tmp.
-Precisamos agora enviar nossa aplicação para o webserver:
-
-Copiando o conteúdo zipado do bastion para o server:
-```sh
-  scp -i minhaChave.pem ../sprint_1.zip ec2-user@10.0.2.219:/tmp/
-```
-
-O nginx por padrão aponta para o ditretório ``/usr/share/nginx/html``. Vamos alterar esse apontamento:
-
-Alteranto pasta root do nginx:
-```sh
-  cd etc/nginx
-  vim nginx.config
-```
-
-Modificar a seguinte linha:
-```sh
-  #root    	/usr/share/nginx/html
-  root    	/var/www/html
-```
-
-Verificando integridade do arquivo `nginf.conf`:
-```sh
-	nginx -t
-```
-
-Vamos criar o diretório `/var/www/html`:
-```sh
-  cd /var/
-  mkdir www/html -p
-```
-
-Movendo nosso conteúdo .zip para este diretório recém criado:
-```sh
-  mv tmp/sprint_1.zip www/html
-```
-
-Descompactando:
-```sh
-  unzip sprint_1.zip
-```
-
-Disponibilizando o conteúdo na raíz do diretório:
-```sh
-  mv sprint_1-pb-aws-univesp/* .
-```
-
-E por fim verificando se a aplicação está online, esperamos ver no terminal a estrutura do nosso HTML:
-```sh
-  curl -X GET htpp://10.0.2.219
-```
-
-
-### Passo 11 - Na página html disponibilizada com o código da Sprint 1, colocar a identificação do grupo e os nomes dos componenentes.
-Na estrutura do HTML desenvolvido durante a sprint 1, foi adicionado o nome dos integrantes do grupo da sprint 2, como segue na imagem abaixo:
-
 ![Página de Validação](assets/img/aplicacao.PNG)
 
 ### Passo 12 - Permitir o acesso da porta 9000 à pasta com a aplicação, para visualização da página de forma online.
@@ -288,4 +186,4 @@ Finzalizada essas duas etapas, nossa aplicação deverá estar acessível atrav�
 ## Conclusão
 Após a realização destas 10 etapas, a arquiterura do nosso ambiente deverá estar como na imagem abaixo.
 O cliente não tem acesso direto à máquina onde estará armazenado o conteúdo da nossa aplicação, todo o tráfego deverá passar pela nossa instância de Bastion Host, o qual tem permissão dentro da VPC para acesso a subnet privada.
-![Arquiterura final](assets/img/diagram.png)
+![Arquiterura final](/assets/img/diagram.png)
