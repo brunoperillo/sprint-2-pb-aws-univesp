@@ -172,11 +172,11 @@ Na criação do grupo de segurança do Load Balancer, devemos adicionar uma regr
 Esta técnica serve para casos específicos onde algumas aplicações só podem ser acessadas através de portas específicas, como no caso de API's.
 
 Adicionar um grupo de segurança existente ou clicar em "criar novo grupo de segurança".
-![Security Group Rule](/assets/img/add-securit-group.png)
+![Security Group Rule](/assets/img/add-security-group.png)
 
 Adicionar Uma rega TCP Personalizado com a porta de acesso 9000.
 Clicar em salvar.
-![Add Rule to New Group](/assets/img/security-group.png)
+![Add Rule to New Group](/assets/img/security-group.PNG)
 
 
 Finzalizada essas duas etapas, nossa aplicação deverá estar acessível através do DNS do Load Balancer
