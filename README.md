@@ -165,7 +165,7 @@ E por fim verificando se a aplicação está online, esperamos ver no terminal a
 ### Passo 11 - Na página html disponibilizada com o código da Sprint 1, colocar a identificação do grupo e os nomes dos componenentes.
 Na estrutura do HTML desenvolvido durante a sprint 1, foi adicionado o nome dos integrantes do grupo da sprint 2, como segue na imagem abaixo:
 
-![Página de Validação](assets/img/aplicacao.png)
+![Página de Validação](assets/img/aplicacao.PNG)
 
 ### Passo 12 - Permitir o acesso da porta 9000 à pasta com a aplicação, para visualização da página de forma online.
 Na criação do grupo de segurança do Load Balancer, devemos adicionar uma regra TCP Personalizada para permitir acesso de qualquer lugar pela porta 9000, caso contrário, o acesso ocorrerá apenas pelas portas padrões 80: HTTP e 443: HTTPS. Isso fará com que um usuário possa acessar nossa aplicação adicionando um `:9000` ao final da URL.
