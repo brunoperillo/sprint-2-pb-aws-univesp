@@ -55,3 +55,33 @@ Antes de começar, é necessário ter uma conta da AWS e acesso ao console da AW
 2. Crie um grupo de segurança público e vincule as seguintes configurações:
 - Regra de entrada: libere o acesso "SSH" ao seu próprio endereço de IP.
 - Regra de saída: libere todo o tráfego ao endereço 0.0.0.0/0.
+
+#### Passo 7 - Criar uma instância t2.micro.
+No painel EC2, selecione executar instância:
+1. Escolha os nomes e tags
+2. Determine o sistema operacional
+3. No campo "Tipo de instância" faça a escolha da opção "t2.micro"
+4. Insira ou crie par de chaves
+5. Edite a "Configurações de rede" a partir da VPC criada anteriormente e conforme a intenção de criação, escolha as subnets para instância, atribua ou não IP público automaticamente. No grupo de segurança escolha ou crie, isso dependerá do seu objetivo para a instância.
+6. Na "configuração de armazenamento" opte pela quantidade e tipo de volume que sua instância irá ter.
+7. Finalize executando a instância, e aguarde a sua execução e disponibilidade.
+
+#### Passo 8 - Instalar um servidor nginx na instância.
+Após configurar as maquinas criadas, para que possa ter acesso a internet.
+Realize os comandos no terminal:
+- sudo su –
+- yum update -y
+- sudo amazon-linux-extras install nginx1
+- systemctl enable nginx –now
+Após os comandos acima, a máquina estará pronta para upar sua aplicação na pasta destinada para root do nginx.
+
+#### Passo 9 - Trocar ou acrescentar a porta 9000 para acesso através do nginx.
+Com a aplicação na pasta em que root do nginx está direcionado. É necessário configurar “Elastic Load Balancer” no console.
+Acesse o painel EC2 e vá em “Balanceamento de carga”, na configuração:
+- Escolha o esquema que sua aplicação é voltada.
+- No campo “Listeners” realize a escolha das portas, no caso a porta HTTP 9000
+- Zona de disponibilidade, selecione as subnets criadas anteriormente.
+- Por uma melhor conduta, crie um grupo de segurança voltado para regras de entrada para porta 9000
+- Na configuração roteamento selecione a porta 9000
+- Registre o destino conforme a instância que se encontra aplicação que queria upar na web.
+- Confirme suas configurações, caso esteja preenchido corretamente. Será criado Elastic Load Balancer
