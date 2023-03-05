@@ -66,8 +66,13 @@ O seguinte esquema sintetiza a arquitetura proposta nesta avaliação:
 
 #**<font color="blue">Eplicando a nossa Solução para a atividade acima</font>**
 O Grupo reunui-se pelo Teams, para dividir suas tarefas. 
+<<<<<<< HEAD
 As tarefas foram organizadas no Trello.
     - Se imagens:
+=======
+As tarefas foi organizadas no Trello.
+    - Segue imagens:
+>>>>>>> e991ea0410603b44ef6f4d422369fc56ddf1f37a
 
 
 
