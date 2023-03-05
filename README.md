@@ -1,64 +1,63 @@
-# Avaliação Sprint 2 - Programa de Bolsas Compass UOL / AWS e Univesp
+# Sprint 2 - Programa de Bolsas Compass UOL / AWS e Univesp
 
 Avaliação da segunda sprint do programa de bolsas Compass UOL para formação em machine learning para AWS.
 
 ***
+## Equipe
+- Adila Mota
+- Irati Gonçalves Maffra
+- Márcio Lima Brunelli
+***
 
-## Execução (Código Fonte)
+## Objetivo
+Exposição na web do projeto da Sprint 1 (**Sistema para validação de Dados de Cadastro**), com a utilização da AWS Cloud.
+***
 
-Exposição na web do projeto da Sprint 1, com a utilização da AWS Cloud.
+## Execução
+A rede privada foi criada dentro da plataforma da AWS
 
 **Especificações**:
 
-Passos de execução do projeto em uma conta AWS disponibilizada no Programa de Bolsas:
+1. Criação de uma VPC.
+https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#vpcs:VpcId=vpc-026b047c4f25003fb
 
-1. Criar uma VPC.
-2. Criar um Internet Gateway, associando-o à VPC criada.
-3. Criar as rotas públicas e privadas.
-4. Criar um NAT Gateway para ligação da rota pública com um IP elástico.
-5. Concluir a configuração da rota privada.
-6. Criar ou editar o Security Group com as regras entrada e saída.
-7. Criar uma instância t2.micro.
-8. Instalar um servidor nginx na instância.
-9. Trocar ou acrescentar a porta 9000 para acesso através do nginx.
-10. Subir ao servidor a aplicação da Sprint 1.
-11. Na página html disponibilizada com o código da Sprint 1, colocar a identificação do grupo e os nomes dos componenentes.
-12. Permitir o acesso da porta 9000 à pasta com a aplicação, para visualização da página de forma online.
+2. Criação de um Internet Gateway, associada à VPC criada.
+https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#igws:
 
-O seguinte esquema sintetiza a arquitetura proposta nesta avaliação:
+3. Criação das rotas públicas e privadas.
+https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#subnets:SubnetId=subnet-0f2eca16e1fc941f0
+
+4. Criação de um NAT Gateway para ligação da rota pública com um IP elástico.
+https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#NatGateways:
+
+5. Concluisão da configuração da rota privada.
+
+6. Criação do Security Group com as regras entrada e saída.
+
+7. Criação de uma instância t2.micro.
+https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Instances:
+
+8. Instalação de um servidor nginx na instância.
+
+9. Mudança para a porta 9000 para acesso através do nginx.
+
+10. Subida no servidor da aplicação da Sprint 1.
+
+11. Colocação da identificação do grupo-5 e os nomes dos componenentes na página html disponibilizada com o código da Sprint 1,
+
+12. Permissão de acesso da porta 9000 à pasta com a aplicação, para visualização da página online.
+
+## Esquema da arquitetura proposta:
 
 <img src='assets/aws_web_server.jpg' width='50%'>
+***
 
+## Desenvolvimento
+
+O projeto foi desenvolvido na plataforma da AWS seguindo roteiro proposto para a Sprint 2 e divisão de tarefas entre os membros da equipe (grupo-5). O código em JavaScript da Sprint 1 utilizado foi o do grupo-2.
 
 ***
 
-## O que será avaliado?
+## Instrução de uso
 
-- Uso do código JavaScript da Sprint 1
-- Seguir as atividades na ordem proposta
-- Subir códigos no git ao longo do desenvolvimento
-- Organização geral do código fonte
-  - Estrutura de pastas
-  - Estrutura da logica de negócio
-  - Divisão de responsabilidades em arquivos/pastas distintos
-  - Otimização do código fonte (evitar duplicações de código)
-- Objetividade do README.md
-- Modelo de organização da equipe para o desenvolvimento do projeto
-- Página criada com acesso online.
-
-***
-
-## Entrega
-
-- Aceitar o convite do repositório da sprint-2-pb-aws-univesp;
-- **O trabalho deve ser feito em grupos de quatro pessoas**;
-  - Evitar repetições de grupos da sprint anterior;
-- Criar uma branch no repositório com o formato grupo-número (Exemplo: grupo-1);
-- Subir o trabalho na branch com um [Readme.md](README.md)
-  - documentar detalhes sobre como a avaliação foi desenvolvida
-  - dificuldades conhecidas
-  - como utilizar o sistema
-  - 🔨 código fonte desenvolvido (Sugestão: pasta `src`)
-  - configuração nginx
-  - URL para acesso à página
-- O prazo de entrega é até às 12h do dia 06/03/2023 no repositório do github ([https://github.com/Compass-pb-aws-2023-Univesp/sprint-2-pb-aws-univesp](https://github.com/Compass-pb-aws-2023-Univesp/sprint-2-pb-aws-univesp)).
+Abra o arquivo index.html no navegador.
