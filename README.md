@@ -132,7 +132,6 @@ Modificar a seguinte linha:
 
 Verificando integridade do arquivo `nginf.conf`:
 ```sh
-	verificar a integridade do config
 	nginx -t
 ```
 
