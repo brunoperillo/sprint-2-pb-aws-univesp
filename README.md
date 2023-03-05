@@ -2,71 +2,45 @@
 
 Avaliação da segunda sprint do programa de bolsas Compass UOL para formação em machine learning para AWS.
 
+
+***
+
+## Objetivo
+Exposição na web do projeto da Sprint 1 (formulário desenvolvido em JavaScript), com a utilização da AWS Cloud.
+
+## Introdução
+Cloud Computing (Computação em nuvem) é a prática de usar uma rede de servidores remotos hospedados na internet para armazenar, gerenciar e processar dados, em vez de um servidor local ou um computador pessoal. Dentre as principais empresas, a AWS (Amazon Web Services) é líder em infraestrutura e serviços de plataforma em nuvem.
+
+A Sprint 02 foi desenvolvida para explorar alguns dos principais serviços fornecidos pela AWS para o desenvolvimento e utilização destas ferramentas bem como a exposição web. Conforme requisitos da [atividade proposta][projeto].
+
+## Descrição
+
+Exposição na web do projeto da [Sprint 1][sprint1], com a utilização da AWS Cloud. Para isto, a figura a seguir representa e sintetiza a arquitetura proposta neste projeto:
+
+<img src='assets/aws_web_server.jpg' width='50%'>
+Mais detalhes das especificações podem ser consultadas em [Sprint 02 (main)][sprint2-main] 
+
+Os detalhes da configuração da AWS podem ser consultados clicando [**aqui**][notion] 
+
+## Dificuldades
+- Familiariedade no uso da plataforma AWS.
+- Documentação do desenvolvimento do projeto.
+
+## Instrução de uso
+Verifique o deploy deste projeto clicando [aqui][pagina] ou acesse o endereço abaixo na barra de endereço do seu navegador de preferência.
+```sh
+54.163.32.88:9000
+```
 ***
 
 ## Equipe
-- Bruno Monserrat Perillo
-- Barbara Haydee Presente
-- Luiz Renato Sassi
-- Oseas Mattoso Monteiro
-
-***
-
-## Execução (Código Fonte)
-
-Exposição na web do projeto da Sprint 1, com a utilização da AWS Cloud.
-
-**Especificações**:
-
-Passos de execução do projeto em uma conta AWS disponibilizada no Programa de Bolsas:
-
-1. Criar uma VPC.
-2. Criar um Internet Gateway, associando-o à VPC criada.
-3. Criar as rotas públicas e privadas.
-4. Criar um NAT Gateway para ligação da rota pública com um IP elástico.
-5. Concluir a configuração da rota privada.
-6. Criar ou editar o Security Group com as regras entrada e saída.
-7. Criar uma instância t2.micro.
-8. Instalar um servidor nginx na instância.
-9. Trocar ou acrescentar a porta 9000 para acesso através do nginx.
-10. Subir ao servidor a aplicação da Sprint 1.
-11. Na página html disponibilizada com o código da Sprint 1, colocar a identificação do grupo e os nomes dos componenentes.
-12. Permitir o acesso da porta 9000 à pasta com a aplicação, para visualização da página de forma online.
-
-O seguinte esquema sintetiza a arquitetura proposta nesta avaliação:
-
-<img src='assets/aws_web_server.jpg' width='50%'>
+| [<img src="https://avatars.githubusercontent.com/u/25699466?v=4" width=115><br><sub>Bruno Monserrat Perillo</sub>](https://github.com/brunoperillo) | [<img src="https://avatars.githubusercontent.com/u/112827096?v=4" width=115><br><sub>Barbara Haydee Presente</sub>](https://github.com/Barbarahayd) | [<img src="https://avatars.githubusercontent.com/u/72028902?v=4" width=115><br><sub>Luiz Renato Sassi</sub>](https://github.com/luizrsassi) | [<img src="https://avatars.githubusercontent.com/u/97359269?v=4" width=115><br><sub>Oseas Mattoso Monteiro</sub>](https://github.com/OseasMonteiro) |
+| :---: | :---: | :---: |:---: |
 
 
 ***
-
-## O que será avaliado?
-
-- Uso do código JavaScript da Sprint 1
-- Seguir as atividades na ordem proposta
-- Subir códigos no git ao longo do desenvolvimento
-- Organização geral do código fonte
-  - Estrutura de pastas
-  - Estrutura da logica de negócio
-  - Divisão de responsabilidades em arquivos/pastas distintos
-  - Otimização do código fonte (evitar duplicações de código)
-- Objetividade do README.md
-- Modelo de organização da equipe para o desenvolvimento do projeto
-- Página criada com acesso online.
-
-***
-
-## Entrega
-
-- Aceitar o convite do repositório da sprint-2-pb-aws-univesp;
-- **O trabalho deve ser feito em grupos de quatro pessoas**;
-  - Evitar repetições de grupos da sprint anterior;
-- Criar uma branch no repositório com o formato grupo-número (Exemplo: grupo-1);
-- Subir o trabalho na branch com um [Readme.md](README.md)
-  - documentar detalhes sobre como a avaliação foi desenvolvida
-  - dificuldades conhecidas
-  - como utilizar o sistema
-  - 🔨 código fonte desenvolvido (Sugestão: pasta `src`)
-  - configuração nginx
-  - URL para acesso à página
-- O prazo de entrega é até às 12h do dia 06/03/2023 no repositório do github ([https://github.com/Compass-pb-aws-2023-Univesp/sprint-2-pb-aws-univesp](https://github.com/Compass-pb-aws-2023-Univesp/sprint-2-pb-aws-univesp)).
+   [projeto]: <https://github.com/Compass-pb-aws-2023-Univesp/sprint-2-pb-aws-univesp.git>
+   [sprint1]: <https://github.com/Compass-pb-aws-2023-Univesp/sprint-1-pb-aws-univesp.git>
+   [sprint2-main]: <https://github.com/Compass-pb-aws-2023-Univesp/sprint-2-pb-aws-univesp>
+   [notion]: <https://ludicrous-help-e3a.notion.site/Sprint-2-f7fe80d6068b41ffbded94a3a28e32a9>
+   [pagina]: <http://54.163.32.88:9000/>
