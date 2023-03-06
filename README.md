@@ -18,7 +18,8 @@ A [Sprint 02][sprint2main]  foi desenvolvida para explorar alguns dos principais
 Exposição na web do projeto da [Sprint 1][sprint1], com a utilização da AWS Cloud. Para isto, a figura a seguir representa e sintetiza a arquitetura proposta neste projeto:
 
 <img src='assets/aws_web_server.jpg' width='50%'>
-Mais detalhes das especificações podem ser consultadas em [Sprint 02][sprint2main]. 
+
+Mais detalhes das especificações podem ser consultadas em [Sprint 02][sprint2main].
 
 Os detalhes da configuração da AWS foram descritas no [Notion][notion] e podem ser consultados clicando [**aqui**][notion]. 
 
@@ -52,3 +53,4 @@ Verifique o deploy deste projeto clicando [aqui][pagina] ou acesse o endereço a
    [sprint2main]: <https://github.com/Compass-pb-aws-2023-Univesp/sprint-2-pb-aws-univesp>
    [notion]: <https://ludicrous-help-e3a.notion.site/Sprint-2-f7fe80d6068b41ffbded94a3a28e32a9>
    [pagina]: <http://54.163.32.88:9000/>
+
