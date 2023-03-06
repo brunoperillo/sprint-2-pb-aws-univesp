@@ -11,7 +11,7 @@ Exposição na web do projeto da [Sprint 1][sprint1] (formulário desenvolvido e
 ## Introdução
 [Cloud Computing][cloud] (Computação em nuvem) é a prática de usar uma rede de servidores remotos hospedados na internet para armazenar, gerenciar e processar dados, em vez de um servidor local ou um computador pessoal. Dentre as principais empresas, a AWS (Amazon Web Services) é líder em infraestrutura e serviços de plataforma em nuvem.
 
-A [Sprint 02][sprint2-main]  foi desenvolvida para explorar alguns dos principais serviços fornecidos pela [AWS][aws] para o desenvolvimento e utilização destas ferramentas bem como a exposição web. Conforme requisitos da [atividade proposta][projeto].
+A [Sprint 02][sprint2main]  foi desenvolvida para explorar alguns dos principais serviços fornecidos pela [AWS][aws] para o desenvolvimento e utilização destas ferramentas bem como a exposição web. Conforme requisitos da [atividade proposta][projeto].
 
 ## Descrição
 
@@ -52,4 +52,3 @@ Verifique o deploy deste projeto clicando [aqui][pagina] ou acesse o endereço a
    [sprint2main]: <https://github.com/Compass-pb-aws-2023-Univesp/sprint-2-pb-aws-univesp>
    [notion]: <https://ludicrous-help-e3a.notion.site/Sprint-2-f7fe80d6068b41ffbded94a3a28e32a9>
    [pagina]: <http://54.163.32.88:9000/>
-
