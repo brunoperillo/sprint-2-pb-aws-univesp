@@ -63,6 +63,7 @@ O seguinte esquema sintetiza a arquitetura proposta nesta avaliação:
   - URL para acesso à página
 - O prazo de entrega é até às 12h do dia 06/03/2023 no repositório do github ([https://github.com/Compass-pb-aws-2023-Univesp/sprint-2-pb-aws-univesp](https://github.com/Compass-pb-aws-2023-Univesp/sprint-2-pb-aws-univesp)).
 
+<<<<<<< HEAD
 ---
 
 # **<font color="blue">Grupo 3 - Sprint 2</font>**<br>
@@ -112,4 +113,44 @@ Foi Utilizado o código da pasta src (Sprint 1 - grupo 5) pra subir no servidor 
 >Observação:
 > Foi Utilizado o código da pasta src e feito o  deploy no servidor AWS.\
 >Segue o link da página 👉http/
+=======
+
+#**<font color="blue">Eplicando a nossa Solução para a atividade acima</font>
+O Grupo reunui-se pelo Teams, para dividir suas tarefas. 
+
+As tarefas foram organizadas no Trello.
+    - Se imagens:
+=======
+As tarefas foi organizadas no Trello.
+    - Segue imagens:
+
+
+
+
+O contato contante durante a contrução da Sprinte foi feita pelo WhahtsApp.
+📚Muitas discurssões, pesquisa e esclarecimento de dúvidas mutuas.
+
+##A seguir a relação do que foi pedido e criado na Sprint_2
+
+Criamos:<br>
+    ✅uma uma VPC.<br>
+    ✅um Internet Gateway, associando-o à VPC criada.<br>
+    ✅as rotas públicas e privadas.<br>
+    ✅um NAT Gateway para ligação da rota pública com um IP elástico.<br>
+    ✅configuramos uma rota privada.<br>
+    ✅o Security Group com as regras entrada e saída.<br>
+    ✅uma instância t2.micro.<br>
+Instalamos:<br>
+    ✅servidor nginx na instância.<br>
+acrescentamos: a porta 9000 para acesso através do nginx.<br>
+Subimos no servidor:<br>
+    ✅a aplicação da Sprint 1.<br>
+Disponibilizamos:<br>
+    ✅em uma página html o código da Sprint 1, colocar a identificação do grupo e os nomes dos componenentes.<br>
+Permitimos:<br>
+    ✅o acesso da porta 9000 à pasta com a aplicação, para visualização da página de forma online.<br>
+
+Foi Usado o código da pasta src na página que foi feito o deploy no servidor web AWS.<br>
+Segue o link da página 👉http/
+>>>>>>> 5eeb90d054f87619f701e1413ec5587a3e01d5c5
 
