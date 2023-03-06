@@ -18,7 +18,7 @@ A [Sprint 02][sprint2main]  foi desenvolvida para explorar alguns dos principais
 Exposição na web do projeto da [Sprint 1][sprint1], com a utilização da AWS Cloud. Para isto, a figura a seguir representa e sintetiza a arquitetura proposta neste projeto:
 
 <img src='assets/aws_web_server.jpg' width='50%'>
-Mais detalhes das especificações podem ser consultadas em [Sprint 2 - main][sprint2main]. 
+Mais detalhes das especificações podem ser consultadas em [Sprint 02][sprint2main]. 
 
 Os detalhes da configuração da AWS foram descritas no [Notion][notion] e podem ser consultados clicando [**aqui**][notion]. 
 
