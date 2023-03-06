@@ -96,17 +96,17 @@ Para utilizar esta solução você precisará:
     >![GatewaysNAT](GatewaysNAT.png)
 
     ✅configuramos uma rota privada.\
-    ✅o Security Group com as regras entrada e saída\
-    >![securityGroup](securityGroup.png)
+    ✅o Security Group com as regras entrada e saída.
+    >![securityGroup](securityGroup.png)\
     ✅uma instância t2.micro.
-- Instalar:\
-   >![Ins_t2.micro](Ins_t2.micro.png)
+- Instalar:
+   >![Ins_t2.micro](Ins_t2.micro.png)\
     ✅servidor nginx na instância.
 - acrescentar: a porta 9000 para acesso através do nginx.
 - subir no servidor:\
     ✅a aplicação da Sprint 1.
 Permitir:\
-    ✅o acesso pela porta 9000 à pasta com a aplicação, para visualização da página de forma online.\
+    ✅o acesso pela porta 9000 à pasta com a aplicação, para visualização da página de forma online.
 
 Foi Utilizado o código da pasta src (Sprint 1 - grupo 5) pra subir no servidor no servidor AWS.<br>
 
