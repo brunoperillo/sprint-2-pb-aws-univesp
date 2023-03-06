@@ -4,9 +4,9 @@ Avaliação da segunda sprint do programa de bolsas Compass UOL para formação 
 
 ***
 ## Equipe
-- Adila
+- Adila Mota
 - Irati Gonçalves Maffra
-- Márcio
+- Márcio Lima Brunelli
 ***
 
 ## Objetivo
@@ -103,5 +103,3 @@ O projeto foi desenvolvido na plataforma da AWS seguindo roteiro proposto para a
 ***
 
 ## Instrução de uso
-
-Abra o arquivo index.html no navegador.

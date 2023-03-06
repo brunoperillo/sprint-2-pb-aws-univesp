@@ -1,7 +1,7 @@
 class email {
     static check() {
       let email = document.getElementById("email").value
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,5}$/;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.(com|org|net|br|edu)$/;
         if (emailRegex.test(email)) {
           const formattedEmail = email.toLowerCase();
           return alert(`${formattedEmail} é um email em formato válido`);
