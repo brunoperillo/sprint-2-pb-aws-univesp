@@ -21,9 +21,9 @@ A rede privada foi criada dentro da plataforma da AWS
 **Especificações**:
 
 1. Criação de uma VPC.
--   No console AWS abra o serviço de VPC
+-   No console AWS, abra o serviço de VPC
 -   Selecione o botão "Criar VPC"
--   Defina o nome da VPC, o bloco de endereço de IP e as configurações do DNS
+-   Defina o nome da VPC, o bloco de endereços de IP e as configurações do DNS
 -   Aguarde confirmação
 -   Divida o bloco de endereço de IP utilizado na criação da VPC:
     -   Na a opção "Subnets" crie quatro Subnets: duas Subnets Privadas vinculadas à VPC, cada uma em um zona de disponibilidade e com bloco de IP diferentes; duas Subnets Públicas vinculadas à VPC criada, cada uma em zona de disponibilidade e com bloco de IP diferentes
@@ -67,12 +67,36 @@ A rede privada foi criada dentro da plataforma da AWS
 -   Eexecute a instância e aguarde a sua disponibilidade
 
 8. Instalação de um servidor nginx na instância.
--   Após configurar as maquinas, realize os comandos no terminal:
-
+-   Após configurar as máquinas, realize os comandos no terminal:
+- Eleve seus privilégios
+```
 sudo su –
+```
+- Atualize o sistema
+```
 yum update -y
+```
+-Instale o nginx
+```
 sudo amazon-linux-extras install nginx1
-systemctl enable nginx –-now Após os comandos acima, a máquina estará pronta para upar sua aplicação na pasta destinada para root do nginx.
+```
+-Navegue até a pasta de configuração do nginx
+```
+cd /etc/nginx
+```
+-Edite o arquivo nginx.config,
+```
+vim nginx.config
+```
+- Altere a seção server do arquivo (server, opção root: troque "/usr/share/nginx/html" por "/var/www/html/scr/")
+- Salve e saia do arquivo
+- IMPORTANTE: Repare, nesse arquivo, que você pode adicionar portas de "listeners" nessa máquina. A porta 9000 poderia ser aberta aqui. No entanto, não é necessário liberá-las nesse arquivo, já que o responsável por abrir o acesso a porta 9000 será o Load Balancer da AWS.
+-Inicie o nginx
+```
+systemctl enable nginx –-now
+```
+
+- Após os comandos acima, a máquina estará pronta para upar sua aplicação na pasta destinada para root do nginx.
 
 9. Mudança para a porta 9000 para acesso através do nginx.
 -   Configure o “Elastic Load Balancer” no console
@@ -86,10 +110,77 @@ systemctl enable nginx –-now Após os comandos acima, a máquina estará pront
     -   Confirme suas configurações e a Elastic Load Balancer será criada
 
 10. Subida no servidor da aplicação da Sprint 1.
+- Caso você não esteja rodando uma instância com o Amazon Linux, os comandos abaixo podem não funcionar.
+- Copie sua chave (caso esteja usando uma chave ssh) da sua máquina local para o servidor acessado
+```
+scp "SuaChave.ssh" "SuaChave.ssh" seuUsuario@IPMaquinaPublica:/tmp
+```
+- Copie os arquivos de seu projeto para a mesma pasta para onde acabou de copiar sua chave de acesso:
+```
+scp "scr.zip" "scr.zip"  seuUsuario@IPMaquinaPublica:/tmp
+```
+- Acesse a máquina em rede pública (bastion) através do terminal. Você precisará do IP público fornecido para a máquina (essa informação está disponível no painel EC2 do console da AWS)
+```
+ssh "SuaChave.ssh" seuUsuario@IPMaquinaPublica
+```
+- Eleve seus privilégios.
+```
+sudo su -
+```
+- Navegue até a pasta /tmp
+```
+cd /tmp
+```
+- Proteja sua chave, concedendo apenas privilégios de leitura ao usuário root
+```
+chmod 400 "SuaChave.ssh"
+```
+- Copie seus arquivos de projeto para o servidor em rede privada.  Você precisará do IP privado fornecido para a máquina (essa informação está disponível no painel EC2 do console da AWS)
+```
+scp "scr" "scr.zip" seuUsuario@IPMaquinaPrivada:/tmp
+```
+- Acesse a máquina privada através da sua chave ssh:
+```
+ssh "SuaChave.ssh" seuUsuario@IPMaquinaPrivada
+```
+- Eleve seus privilégios
+```
+sudo su -
+```
+- Navegue até o diretório tmp
+```
+cd /tmp
+```
+- Copie os aquivos do seu projeto para a pasta de arquivos do nginx
+```
+install "scr" /var/www/html/scr/
+```
+- Navegue até a pasta para onde os arquivos foram enviados (/var/www/html/scr/)
+```
+cd /var/www/html/scr/
+```
+- Descompacte os arquivos
+```
+unzip "scr.zip"
+```
+- Mova o arquivo "scr.zip" para /home, para fins de histórico
+```
+mv "scr.zip" /home/usuario
+```
+- Altere o proprietário dos arquivos do diretório
+```
+chown nginx: * -R
+```
+- Cheque se todos os seus arquivos foram descompactados corretamente, e se o nginx é o proprietário de todos os arquivos e pastas
+```
+ls -lh
+```
+- Caso tudo tenha sido descompactado corretamente, reinicie o nginx
+```
+sudo service nginx restart
+```
+- Seu site está exposto à internet!
 
-11. Colocação da identificação do grupo-5 e os nomes dos componenentes na página html disponibilizada com o código da Sprint 1,
-
-12. Permissão de acesso da porta 9000 à pasta com a aplicação, para visualização da página online.
 
 ## Esquema da arquitetura proposta:
 
