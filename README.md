@@ -4,9 +4,10 @@ Avaliação da segunda sprint do programa de bolsas Compass UOL para formação 
 
 ***
 
-## Links do projetos
-<alb-sprint2-grupo5-1634502499.us-east-1.elb.amazonaws.com>
-<alb-sprint2-grupo5-1634502499.us-east-1.elb.amazonaws.com:9000>
+## Links do projeto
+alb-sprint2-grupo5-1634502499.us-east-1.elb.amazonaws.com
+
+alb-sprint2-grupo5-1634502499.us-east-1.elb.amazonaws.com:9000
 
 ## Equipe
 - Adila Mota
@@ -195,13 +196,11 @@ sudo service nginx restart
 
 ## Topologia realizada:
 
-<img src='Topologia-Grupo_5.jpg' width='50%'>
+<img src='assets/Topologia-Grupo_5.png' width='50%'>
 
 
 ## Desenvolvimento
 
 O projeto foi desenvolvido na plataforma da AWS seguindo roteiro proposto para a Sprint 2 e divisão de tarefas entre os membros da equipe (grupo-5). O código em JavaScript da Sprint 1 utilizado foi o do grupo-2.
 
-***
 
-## Instrução de uso
