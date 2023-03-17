@@ -3,6 +3,11 @@
 Avaliação da segunda sprint do programa de bolsas Compass UOL para formação em machine learning para AWS.
 
 ***
+
+## Links do projetos
+<alb-sprint2-grupo5-1634502499.us-east-1.elb.amazonaws.com>
+<alb-sprint2-grupo5-1634502499.us-east-1.elb.amazonaws.com:9000>
+
 ## Equipe
 - Adila Mota
 - Irati Gonçalves Maffra
@@ -182,10 +187,16 @@ sudo service nginx restart
 - Seu site está exposto à internet!
 
 
-## Esquema da arquitetura proposta:
+## Topologia proposta:
 
 <img src='assets/aws_web_server.jpg' width='50%'>
 ***
+
+
+## Topologia realizada:
+
+<img src='Topologia-Grupo_5.jpg' width='50%'>
+
 
 ## Desenvolvimento
 
